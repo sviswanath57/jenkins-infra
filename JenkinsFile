@@ -22,5 +22,10 @@ pipeline {
                 echo "viswanath you are the next devops engineer in couple of days be ready"
             }
         }
+        stage('viswa-devops1') {
+            steps {
+                echo "viswanath you are the next devops engineer in couple of days be ready hero"
+            }
+        }
     }
 }
