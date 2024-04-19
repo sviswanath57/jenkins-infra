@@ -4,7 +4,10 @@ pipeline {
             label 'AGENT'
         }
     }
-
+    environment{
+        GREETING = 'Hello viswanath you are very good'
+    }
+    // Build
     stages {
         stage('Build') {
             steps {
@@ -30,6 +33,27 @@ pipeline {
             steps {
                 echo "viswanath you are the next devops engineer in couple of days be ready hero"
             }
+        }
+        stage('shell scripting'){
+            sh '''
+                echo 'its running under shell build stage'
+            '''
+        }
+    }
+    // Post Bunoild
+    post{
+        always {
+            echo 'always run this in any conditions'
+        }
+
+        failure{
+            echo 'the build is getting failed'
+        }
+
+        success{
+            echo 'i will give output when build pipeline success'
+        }
+
         }
     }
 }
