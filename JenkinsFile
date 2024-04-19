@@ -75,7 +75,7 @@ pipeline {
     // Post Bunoild
     post{
         always {
-            echo 'always run this in any conditions'
+            echo 'always run this in any conditionss'
         }
 
         failure{
