@@ -7,6 +7,9 @@ pipeline {
     environment{
         GREETING = 'Hello viswanath you are very good'
     }
+    options{
+        timeout(time: 1, unit: 'SECONDS')
+    }
     // Build
     stages {
         stage('Build') {
@@ -39,6 +42,7 @@ pipeline {
                 sh '''
                     echo 'its running under shell build stage'
                     echo "$GREETING"
+                    sleep 10
                 '''
             }
         }
