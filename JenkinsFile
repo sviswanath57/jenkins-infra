@@ -38,7 +38,7 @@ pipeline {
             steps{
                 sh '''
                     echo 'its running under shell build stage'
-                    env
+                    echo "$GREETING"
                 '''
             }
         }
