@@ -10,7 +10,7 @@ pipeline {
         // disableConcurrentBuilds()
     }
     parameters {
-        choice(name: 'action', choices: ['apply', 'destroy'], description: 'Pick something')
+        choice(name: 'action', choices: ['apply', 'destroy'], description: 'Pick ssomething')
     }
     // build
     stages {
